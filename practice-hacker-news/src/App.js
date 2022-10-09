@@ -1,11 +1,9 @@
 import React from 'react'
-import { Switch, Route } from 'react-router-dom'
-
-import Home from './Home'
-import Movie from './SingleMovie'
-
+import SearchForm from './SearchForm'
+import Stories from './Stories'
+import Buttons from './Buttons'
 function App() {
-  return <h2>movie DB starter</h2>
+  return <h2>hacker news starter</h2>
 }
 
 export default App

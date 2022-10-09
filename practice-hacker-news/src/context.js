@@ -1,6 +1,18 @@
-import React, { useState, useContext, useEffect } from 'react'
-// make sure to use https
-export const API_ENDPOINT = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_MOVIE_API_KEY}`
+import React, { useContext, useEffect, useReducer } from 'react'
+
+import {
+  SET_LOADING,
+  SET_STORIES,
+  REMOVE_STORY,
+  HANDLE_PAGE,
+  HANDLE_SEARCH,
+} from './actions'
+import reducer from './reducer'
+
+const API_ENDPOINT = 'https://hn.algolia.com/api/v1/search?'
+
+const initialState = {}
+
 const AppContext = React.createContext()
 
 const AppProvider = ({ children }) => {
