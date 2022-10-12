@@ -12,7 +12,33 @@ function App() {
   if (loading) {
     return <Loading />;
   }
-  return <main>Quiz app</main>;
+  const { question, incorrect_answers, correct_answers } = questions[0];
+  const answers = [...incorrect_answers, correct_answers];
+  return (
+    <main>
+      {/* <Modal /> */}
+      <section className="quiz">
+        <p className="correct-answers">
+          correct_answers: {correct}/{index}
+        </p>
+        <article className="container">
+          <h2 dangerouslySetInnerHTML={{ __html: question }} />
+
+          <div className="btn-container">
+            {answers.map((answer, index) => {
+              return (
+                <button
+                  key={index}
+                  className="answer-btn"
+                  dangerouslySetInnerHTML={{ __html: answer }}
+                ></button>
+              );
+            })}
+          </div>
+        </article>
+      </section>
+    </main>
+  );
 }
 
 export default App;
