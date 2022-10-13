@@ -24,7 +24,7 @@ function App() {
   const answers = [...incorrect_answers, correct_answers];
   return (
     <main>
-      {/* <Modal /> */}
+      <Modal />
       <section className="quiz">
         <p className="correct-answers">
           correct_answers: {correct}/{index}
