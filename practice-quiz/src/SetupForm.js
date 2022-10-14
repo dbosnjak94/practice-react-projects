@@ -21,6 +21,15 @@ const SetupForm = () => {
               max={50}
             />
           </div>
+          <div className="form-contorl">
+            {/* category */}
+            <label htmlFor="category">category</label>
+            <select
+              name="category"
+              id="category "
+              className="form-input"
+            ></select>
+          </div>
           {error && (
             <p>can't generate questions, please try different options</p>
           )}
